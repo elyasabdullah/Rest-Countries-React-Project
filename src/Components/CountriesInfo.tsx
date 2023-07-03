@@ -20,6 +20,7 @@ export default function CountriesInfo() {
 		showCountryInfoState,
 		setShowCountryInfoState
 	} = useContext(AppContext);
+	console.log(Data);
 	return (
 			<div className="countriesInfo">
 				{
@@ -43,7 +44,7 @@ export default function CountriesInfo() {
 										setBorderCountries(ele.borders);
 									}} 
 									key={ele.name} className={themeSwitcher === "Dark Mode" ? "card dark" : "card very-light"}>
-										<img src={FlagImage} alt="Country Flag"/>
+										<img src={ele.flags.png} alt="Country Flag"/>
 										<p className="countryName">
 											{ele.name}
 										</p>
@@ -77,7 +78,7 @@ export default function CountriesInfo() {
 											setBorderCountries(ele.borders); 
 										}}
 										key={ele.name} className={themeSwitcher === "Dark Mode" ? "card dark" : "card very-light"}>
-											<img src={FlagImage} alt="Country Flag"/>
+											<img src={ele.flags.png} alt="Country Flag"/>
 											<p className="countryName">
 												{ele.name}
 											</p>
@@ -119,7 +120,7 @@ export default function CountriesInfo() {
 										setBorderCountries(ele.borders);
 									}} 
 									key={ele.name} className={themeSwitcher === "Dark Mode" ? "card dark" : "card very-light"}>
-										<img src={FlagImage} alt="Country Flag"/>
+										<img src={ele.flags.png} alt="Country Flag"/>
 										<p className="countryName">
 											{ele.name}
 										</p>

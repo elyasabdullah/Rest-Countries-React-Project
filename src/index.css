@@ -136,6 +136,7 @@ body {
 }
 .countriesInfo .card img {
   width:100%;
+  height:145px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
@@ -160,7 +161,7 @@ body {
     margin-bottom:1rem;
   }
   .main .top-elements .searchCountry input {
-    width:100%;
+    width: calc(100% - 2rem);
   }
 }
 /* Selected Country Info */
@@ -189,6 +190,7 @@ body {
   display:flex;
   justify-content: space-around;
   align-items: center;
+  font-size:1rem;
 }
 .selectedCountryInfo button .backAndSvg svg {
   width:22px;
