@@ -1,7 +1,6 @@
 import React,{useState, useContext} from "react";
 import ArrowDown from "../assets/chervon down.png"
 import { AppContext } from "../App";
-import FlagImage from "../assets/ye.png";
 import SearchCountry from "./SearchCountry";
 import FilterBy from "./FilterBy";
 import CountriesInfo from "./CountriesInfo";
@@ -21,7 +20,9 @@ export default function Main() {
 			themeSwitcher,
 			setThemeSwitcher,
 			setShowCountryInfoState, 
-			showCountryInfoState
+			showCountryInfoState,
+			countryImageUrl,
+			setCountryImageUrl
 		} = useContext(AppContext);
     const handleBackBtn = function() {
 			setShowCountryInfoState(prev => !prev);
@@ -67,7 +68,7 @@ export default function Main() {
 								</div>
 							</button>
 						<div className="card">
-							<img src={FlagImage} alt="" />
+							<img src={countryImageUrl} alt="" />
 							<div className="moreInfo">
 								<h3>{countryName}</h3>
 								<div className="paragraphs">

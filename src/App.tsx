@@ -33,6 +33,8 @@ interface MyContextValues {
   setBorderCountries:React.Dispatch<React.SetStateAction<string[] | undefined>>;
   countryTopLevelDomains: string[]; 
   setCountryTopLevelDomains: React.Dispatch<React.SetStateAction<string[]>>
+  countryImageUrl: string, 
+  setCountryImageUrl:React.Dispatch<React.SetStateAction<string>>
 }
 export const AppContext = React.createContext<MyContextValues>({
   themeSwitcher:'',
@@ -64,7 +66,9 @@ export const AppContext = React.createContext<MyContextValues>({
   borderCountries:[], 
   setBorderCountries:()=> undefined,
   countryTopLevelDomains: [], 
-  setCountryTopLevelDomains: ()=> undefined
+  setCountryTopLevelDomains: ()=> undefined,
+  countryImageUrl: "", 
+  setCountryImageUrl: () => undefined
 })
 function App() {
   const [themeSwitcher, setThemeSwitcher] = useState("Dark Mode");
@@ -82,7 +86,8 @@ function App() {
   const [countryCurrencies, setCountryCurrencies] = useState<{ code: string; name: string; symbol: string; }[] | undefined>([]);
   const [countryLanguages, setCountryLanguages] = useState<({ iso639_1: string; iso639_2: string; name: string; nativeName: string; } | { iso639_2: string; name: string; iso639_1?: string | undefined; nativeName?: string | undefined; })[]>([]);
   const [borderCountries, setBorderCountries] = useState<string[] | undefined>([]);
-  const [countryTopLevelDomains, setCountryTopLevelDomains] = useState<string[]>([])
+  const [countryTopLevelDomains, setCountryTopLevelDomains] = useState<string[]>([]);
+  const [countryImageUrl, setCountryImageUrl] = useState<string>('');
   return ( 
     <div
       onClick={() => {
@@ -123,6 +128,8 @@ function App() {
           setBorderCountries,
           countryTopLevelDomains, 
           setCountryTopLevelDomains,
+          countryImageUrl,
+          setCountryImageUrl
         }}
       >
         <Header/>

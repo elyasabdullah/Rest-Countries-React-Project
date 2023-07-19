@@ -18,7 +18,9 @@ export default function CountriesInfo() {
 		searchValue, 
 		continentCountries,
 		showCountryInfoState,
-		setShowCountryInfoState
+		setShowCountryInfoState,
+		countryImageUrl, 
+		setCountryImageUrl
 	} = useContext(AppContext);
 	console.log(Data);
 	return (
@@ -38,7 +40,7 @@ export default function CountriesInfo() {
 										setCountrySubRegion(ele.subregion);
 										setCountryCapital(ele.capital);
 										setCountryTopLevelDomains(ele.topLevelDomain)
-										
+										setCountryImageUrl(ele.flags.png);
 										setCountryCurrencies(ele.currencies)
 										setCountryLanguages(ele.languages);
 										setBorderCountries(ele.borders);
