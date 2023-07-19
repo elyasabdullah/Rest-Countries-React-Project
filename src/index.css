@@ -171,7 +171,7 @@ body {
 .selectedCountryInfo button {
   border:none;
   padding:8px 1rem;
-  cursor:pointer;
+  margin:5px;
   font-weight: bold;
   letter-spacing:1.5px;
   border-radius:3px;
@@ -228,8 +228,7 @@ body {
   display:flex;
   align-content: space-between;
   flex-wrap: wrap;
-  grid-column-gap:10px;
-  grid-row-gap:10px;
+  justify-content: center;
 }
 @media(max-width:991px) {
   .selectedCountryInfo .card {

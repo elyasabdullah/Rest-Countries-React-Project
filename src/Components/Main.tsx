@@ -68,7 +68,7 @@ export default function Main() {
 								</div>
 							</button>
 						<div className="card">
-							<img src={countryImageUrl} alt="" />
+							<img src={countryImageUrl} alt="Country Name" />
 							<div className="moreInfo">
 								<h3>{countryName}</h3>
 								<div className="paragraphs">
