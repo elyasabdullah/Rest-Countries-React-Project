@@ -237,6 +237,21 @@ body {
     grid-template-columns: 45% 55%;
   }
 }
+@media(min-width:1140px) {
+  .selectedCountryInfo .card img {
+    width:550px;
+    height:400px;
+  }
+}
+@media(min-width:1320px) {
+  .selectedCountryInfo .card {
+    grid-template-columns: 600px 600px;
+  }
+  .selectedCountryInfo .card img {
+    width:600px;
+    height:400px;
+  }
+}
 @media(min-width:769px) {
   .selectedCountryInfo {
     height:calc(100vh - 58px)

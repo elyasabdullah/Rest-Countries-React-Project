@@ -40,10 +40,10 @@ export default function CountriesInfo() {
 										setCountrySubRegion(ele.subregion);
 										setCountryCapital(ele.capital);
 										setCountryTopLevelDomains(ele.topLevelDomain)
-										setCountryImageUrl(ele.flags.png);
 										setCountryCurrencies(ele.currencies)
 										setCountryLanguages(ele.languages);
 										setBorderCountries(ele.borders);
+										setCountryImageUrl(ele.flag);
 									}} 
 									key={ele.name} className={themeSwitcher === "Dark Mode" ? "card dark" : "card very-light"}>
 										<img src={ele.flags.png} alt="Country Flag"/>
@@ -74,10 +74,10 @@ export default function CountriesInfo() {
 											setCountrySubRegion(ele.subregion);
 											setCountryCapital(ele.capital);
 											setCountryTopLevelDomains(ele.topLevelDomain)
-											
 											setCountryCurrencies(ele.currencies)
 											setCountryLanguages(ele.languages);
 											setBorderCountries(ele.borders); 
+											setCountryImageUrl(ele.flag);
 										}}
 										key={ele.name} className={themeSwitcher === "Dark Mode" ? "card dark" : "card very-light"}>
 											<img src={ele.flags.png} alt="Country Flag"/>
@@ -120,6 +120,7 @@ export default function CountriesInfo() {
 										setCountryCurrencies(ele.currencies)
 										setCountryLanguages(ele.languages);
 										setBorderCountries(ele.borders);
+										setCountryImageUrl(ele.flag);
 									}} 
 									key={ele.name} className={themeSwitcher === "Dark Mode" ? "card dark" : "card very-light"}>
 										<img src={ele.flags.png} alt="Country Flag"/>
