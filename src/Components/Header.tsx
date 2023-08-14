@@ -1,6 +1,5 @@
 import React,{useState, useContext} from "react";
-import SunImage from "../assets/icon-sun.svg";
-import MoonImage from "../assets/icon-moon.svg";
+
 import { AppContext } from "../App";
 interface Props {
     themeSwitcher: string
@@ -16,7 +15,7 @@ export default function Header() {
 		}
 		return (
         <div 
-        className={themeSwitcher === "Dark Mode" ? "header dark": "header ver-light"}>
+        className={themeSwitcher === "Dark Mode" ? "header dark": "header very-light"}>
             <div className="container">
                 <div className="header-content">
                     <h3>Where in the world?</h3>

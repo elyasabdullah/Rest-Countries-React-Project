@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../App";
 import Data from "../assets/data.json";
-import FlagImage from "../assets/ye.png";
 export default function CountriesInfo() {
 	const {
 		setCountryName,
@@ -22,7 +21,6 @@ export default function CountriesInfo() {
 		countryImageUrl, 
 		setCountryImageUrl
 	} = useContext(AppContext);
-	console.log(Data);
 	return (
 			<div className="countriesInfo">
 				{
@@ -140,7 +138,6 @@ export default function CountriesInfo() {
 								)
 							}
 						}
-						
 					})
 				}
 			</div>

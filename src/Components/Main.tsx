@@ -34,6 +34,7 @@ export default function Main() {
 			}
 		}
 		let countryLanArr = [];
+		// We don't used if condition because all countries has at least one language
 		for(let i = 0; i < countryLanguages?.length; i++) {
 			countryLanArr.push(countryLanguages[i].name);
 		}
